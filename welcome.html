@@ -7,13 +7,31 @@
 
 <h1>Welcome</h1>
 <p>This is a paragraph.</p>
-<form>
+<form onsubmit="myFunction()">
   <label for="username">username:</label>
-  <input type="text" id="username" name="username"><br><br>
-  <label for="pwd">pwd:</label>
-  <input type="text" id="pwd" name="pwd"><br><br>
-  <input type="submit" value="Submit">
-</form>
 
+  <input type="text" id="username" name="username" value="vidya"><br><br>
+  <input type="text" id="username" name="username" value="vidya"><br><br>
+
+  <label for="pwd">pwd:</label>
+  <input type="password" id="pwd" name="pwd"><br><br>
+  <input type="submit" value="Submit">
+  <input type="checkbox" onclick="togglePassword()">Show Password
+</form>
+<script>
+function myFunction() {
+  alert("The form was submitted by the user" + document.getElementById ("username").value);
+}
+function togglePassword() {
+  var x = document.getElementById("pwd");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+
+
+</script>
 </body>
 </html>
